@@ -28,10 +28,9 @@ class NetworkManager {
     func getMovie(page: Int, completed: @escaping(Result<Movie, MovieError>) -> Void) {
         let endpoint = baseURL + "/movie/upcoming?api_key=\(apiKey)&language=en-US&page=\(page)"
         
-        print(endpoint)
         
         guard let url = URL(string: endpoint) else {
-            completed(.failure(.invalidUsername))
+            completed(.failure(.invalidMovie))
             return
             
         }

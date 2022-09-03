@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+
+struct MovieDetail: Codable, Hashable {
+    var id: Int
+    var imdbId: String?
+    var title: String?
+    var overview: String?
+    var backdropPath: String?
+    var releaseDate: String?
+    var voteAverage: Double?
+}
